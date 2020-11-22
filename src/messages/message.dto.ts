@@ -11,3 +11,4 @@ readonly text: string;
 @ApiProperty()
 owner: CreateUserDTO;
 }
+    

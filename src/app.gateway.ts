@@ -1,7 +1,8 @@
 import { SubscribeMessage, WebSocketGateway, OnGatewayConnection, OnGatewayDisconnect, OnGatewayInit, WebSocketServer, WsResponse } from '@nestjs/websockets';
 import { Socket, Server } from 'socket.io';
 import { 
-  Logger} from '@nestjs/common';
+  Logger, UseGuards} from '@nestjs/common';
+import { AuthGuard } from '@nestjs/passport';
 
 
 @WebSocketGateway()
@@ -18,7 +19,8 @@ export class AppGateway implements OnGatewayConnection,OnGatewayDisconnect,OnGat
   handleDisconnect(client: Socket) {
     this.logger.log(`client disconnected : ${client.id}`)
   }
-
+  
+  @UseGuards(AuthGuard('jwt'))
   handleConnection(client: Socket, ...args: any[]) {
     this.logger.log(`client connected : ${client.id}`)
   }

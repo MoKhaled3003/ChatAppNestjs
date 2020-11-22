@@ -1,18 +1,25 @@
 import { User } from './users.model';
 import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
-import { Injectable, UnauthorizedException } from '@nestjs/common';
+import { Injectable, Req, UnauthorizedException } from '@nestjs/common';
 import { PassportStrategy } from '@nestjs/passport';
 import { Strategy,ExtractJwt } from 'passport-jwt';
 import {jwtpayload} from './jwtpayload.interface'
+import { Socket } from 'dgram';
 
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy){
     constructor(
-        @InjectModel('User') private readonly UserModel : Model<User>
+        @InjectModel('User') private readonly UserModel : Model<User> 
     ){
         super({
-            jwtFromRequest : ExtractJwt.fromUrlQueryParameter('token'),
+            jwtFromRequest : function(client) {
+                var token = null;
+                if (client && client.handshake.query.token) {
+                    token = client.handshake.query.token;
+                }
+                return token;
+            },
             secretOrKey : 'hakonamatata'
         })
     }

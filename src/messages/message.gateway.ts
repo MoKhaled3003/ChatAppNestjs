@@ -10,15 +10,17 @@ import { MessagesService } from './message.service';
 import { CreateMessageDTO } from './message.dto';
 
 @UseGuards(AuthGuard('jwt'))
+
 @WebSocketGateway()
 
 export class MessageGateway {
   constructor(private  messageService: MessagesService) {}
-
+  private logger :Logger = new Logger('MessagesLogger')
   @WebSocketServer() wss: Server;
 
   @SubscribeMessage('messageToServer')
   handleMessage(client: Socket, @Body() createMessageDTO: CreateMessageDTO,@Req() req): void {
+
    this.wss.emit('messageToClient',createMessageDTO)
    this.messageService.createMessage(createMessageDTO,req.user);
   }

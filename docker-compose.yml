@@ -1,0 +1,37 @@
+version: "3"
+# all the containers have to declare inside services
+services:
+  # App service
+  nestchat:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # image name
+    image: mokhaled3003/chatapp
+    # container name
+    container_name: nestchat
+    # always restart the container if it stops.
+    restart: always
+    # docker run -t is allow
+    tty: true
+    # application port, this is take value from env file
+    ports:
+      - 3004
+    # working directory
+    working_dir: /var/www/nest-chat-realtime
+    # save (persist) data and also to share data between containers
+    volumes:
+      - ./:/var/www/nest-chat-realtime
+      - /var/www/nest-chat-realtime/node_modules
+      # application network, each container for a service joins this network
+    networks:
+      - nest-chat-network
+
+  #Docker Networks
+networks:
+  # All container connect in a network
+  nest-chat-network:
+    driver: bridge
+# save (persist) data
+volumes:
+  red_data: {}

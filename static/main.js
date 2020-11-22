@@ -26,9 +26,14 @@ const app = new Vue({
         }
     },
     created() {
-        this.socket = io('http://localhost:3000/', { transports: ['websocket'], path: '', query: { token : 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1vb29rZWVrayIsImlhdCI6MTYwNTk2NjY4N30.zun9VDLcdjHdmg3UBCtoHpz1Hv5vRCcM43cXKRqT7Sw' } })
+        this.socket = io('http://localhost:3000/',{
+                query: {
+                  'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1vb29rZWVrayIsImlhdCI6MTYwNjA3MDkxOX0.T1BQYMAYUW_5jyqI3eFQbojpXKkpOElPjz3iiTD3FRk'
+                }
+          })
         this.socket.on('messageToClient', (message) => {
             this.receivedMessage(message)
         })
     }
 })
+

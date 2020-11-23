@@ -32,7 +32,6 @@ try{
 async findUser(createUserDTO): Promise<{accessToken : string}> {
     let {username,password} = createUserDTO
     let user =  await this.UserModel.findOne({username}).exec();
-    console.log(user)
     if(user && await this.verifyPassword(password,user.password)){
         let payload : jwtpayload = {username}
         let accessToken  =  this.jwtService.sign(payload);
@@ -41,12 +40,6 @@ async findUser(createUserDTO): Promise<{accessToken : string}> {
         throw new UnauthorizedException('username or password are invalid')
     }
 }
-// async update(id, CreateUserDTO: CreateUserDTO): Promise<any> {
-// return await this.UserModel.findByIdAndUpdate(id, CreateUserDTO, { new: true });
-// }
-// async delete(id): Promise<any> {
-// return await this.UserModel.findByIdAndRemove(id);
-// }
 
  private async hashPassword (password: string,salt: string): Promise<string>{
      return bcrypt.hash(password,salt);

@@ -28,7 +28,7 @@ const app = new Vue({
     created() {
         this.socket = io('http://localhost:3000/',{
                 query: {
-                  'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1vb29rZWVrayIsImlhdCI6MTYwNjA3MDkxOX0.T1BQYMAYUW_5jyqI3eFQbojpXKkpOElPjz3iiTD3FRk'
+                  'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXJ0ZXN0IiwiaWF0IjoxNjA2MTU1ODEyfQ.yEi3cRIH0x8crCGHAReGOTXKzfOcgsr8kM89Vdq-81c'
                 }
           })
         this.socket.on('messageToClient', (message) => {

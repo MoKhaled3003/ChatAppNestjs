@@ -1,0 +1,6 @@
+User has been logged in {"username":"usertest","password":"12345678"} at Mon, 23 Nov 2020 22:39:40 GMTUser has been logged in {"username":"usertest","password":"12345678"} at Mon, 23 Nov 2020 22:39:44 GMTUser has been logged in {"username":"usertest","password":"12345678"} at Mon, 23 Nov 2020 22:40:27 GMTUser has been logged in {"username":"usertest","password":"12345678"} at Mon, 23 Nov 2020 22:40:29 GMTUser has been logged in {"username":"usertest","password":"12345678"} at Mon, 23 Nov 2020 22:40:57 GMTUser has been logged in {"username":"usertest","password":"12345678"} at Mon, 23 Nov 2020 22:41:00 GMTUser has been logged in {"username":"usertest","password":"12345678"} at Mon, 23 Nov 2020 22:41:01 GMTUsersControllerLogger  User has been logged in {"username":"usertest","password":"12345678"} at Mon, 23 Nov 2020 22:42:32 GMT
+UsersControllerLogger  User has been logged in {"username":"usertest","password":"12345678"} at Mon, 23 Nov 2020 22:42:36 GMT
+UsersControllerLogger  User has been logged in {"username":"usertest","password":"12345678"} at Mon, 23 Nov 2020 22:42:37 GMT
+MessageGatewayLogger  usertest has sent message to all {"name":"dqwdqwd","text":"wqdqwdqwdqd"} at Mon, 23 Nov 2020 22:43:25 GMT
+AppGatewayLogger  app gateway initialized
+AppGatewayLogger  client connected : caFc4-IZBeN4xf4sAAAA at Mon, 23 Nov 2020 22:45:42 GMT

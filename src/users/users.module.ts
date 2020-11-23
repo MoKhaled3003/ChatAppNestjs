@@ -7,9 +7,10 @@ import { UserSchema } from './users.model';
 import {JwtModule} from '@nestjs/jwt';
 import {PassportModule} from '@nestjs/passport'
 import { JwtStrategy } from './jwt.strategy';
+import { LoggerModule } from 'src/logger/looger.module';
 
 @Module({
-  imports: [MongooseModule.forFeature([{ name: 'User', schema: UserSchema }]),
+  imports: [LoggerModule,MongooseModule.forFeature([{ name: 'User', schema: UserSchema }]),
   PassportModule.register({defaultStrategy : 'jwt'}),
   JwtModule.register({
     secret : 'hakonamatata'

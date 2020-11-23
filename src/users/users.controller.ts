@@ -3,28 +3,28 @@ import {
     Post,
     Body,
     UsePipes,
-    ValidationPipe,
-    Logger
+    ValidationPipe
   } from '@nestjs/common';
   import { UsersService } from './users.service';
   import {CreateUserDTO} from './users.dto'
+  import { MyLogger } from 'src/logger/logger.service';
 
   @Controller('users')
   export class UsersController {
-    constructor(private readonly usersService: UsersService) {}
-    private logger : Logger = new Logger('AppGatewayLogger')
+    constructor(private readonly usersService: UsersService,
+    private logger : MyLogger = new MyLogger('UsersControllerLogger')) {}
   
     @Post('/register')
     @UsePipes(ValidationPipe)
     async register(@Body() createUserDTO: CreateUserDTO):Promise<void> {
-      this.logger.verbose(`User has been created ${createUserDTO} at ${Date.now}`)
+      this.logger.log(`User has been created ${JSON.stringify(createUserDTO)} at ${new Date().toUTCString()}`,"UsersControllerLogger")
       return this.usersService.create(createUserDTO);
     }
   
     @Post('/login')
     @UsePipes(ValidationPipe)
     login(@Body() createUserDTO: CreateUserDTO): Promise<{accessToken : string}> {
-      this.logger.verbose(`User has been logged in ${createUserDTO} at ${Date.now}`)
+      this.logger.log(`User has been logged in ${JSON.stringify(createUserDTO)} at ${new Date().toUTCString()}`,"UsersControllerLogger")
       return this.usersService.findUser(createUserDTO);
     }
   }

@@ -14,12 +14,12 @@ import {
   import { GetUser } from 'src/users/get-user.decorator';
   import { User } from 'src/users/users.model';
 
-  @UseGuards(AuthGuard('jwt'))
   @Controller('messages')
   export class MessagesController {
     constructor(private readonly messageService: MessagesService) {}
     
     @Post('/')
+      
     @UsePipes(ValidationPipe)
     async register(@Body() createMessageDTO: CreateMessageDTO,@Req() req):Promise<void> {
         console.log(req.user)

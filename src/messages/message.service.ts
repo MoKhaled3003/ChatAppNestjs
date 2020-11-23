@@ -12,10 +12,8 @@ constructor(@InjectModel('Message') private readonly messageModel: Model<Message
 
 async createMessage(createMessageDTO: CreateMessageDTO,user: User): Promise<any> {
     let createdMessage = new this.messageModel(createMessageDTO);
-    console.log(createdMessage)
     createdMessage.owner = user;
-    console.log(createdMessage)
-
     return await createdMessage.save();
 }
+
 }

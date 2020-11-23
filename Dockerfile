@@ -16,5 +16,5 @@ RUN npm cache clean --force
 # install all dependencies
 RUN npm install
 
-EXPOSE 8080:8080
-CMD [ "npm", "run", "start:dev" ]
+EXPOSE 3000
+CMD [ "npm", "run", "start" ]

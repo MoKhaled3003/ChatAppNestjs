@@ -24,30 +24,24 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+[Nest](https://github.com/nestjs/nest) framework Chat App as a proof of concept kindly find postman collection save in root directory to test APIs .
 
-## Installation
-
-```bash
-$ npm install
-```
 
 ## Running the app
 
 ```bash
-# development
-$ npm run start
+# build docker image for the app
+$ docker build -t mokhaled3003/chatapp .
+$ docker pull mongo:latest
+$ docker-compose up
 
-# watch mode
-$ npm run start:dev
+# development mode
+$ npm install
+$ npm start
 
-# production mode
-$ npm run start:prod
-```
 
 ## Test
 
-```bash
 # unit tests
 $ npm run test
 
@@ -60,14 +54,49 @@ $ npm run test:cov
 
 ## Support
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
+please note that in development mode you must change mongoose connection string in './src/app.module.ts' which is used for docker image to connect mongodb service in docker compose from 'mongodb://mongodb:27017/Chat' to 
+```javascript
+  imports: [MongooseModule.forRoot('mongodb://localhost:27017/Chat')], //used for development mode
+```
+ i have used passport-jwt as my third party authentication service , so in './src/users/jwt.strategy.ts' you will find i have made custom jwt token extractor to extract token from query param in websocket connection to allow only authenticated users to connect to messages service websocket server.
+```javascript
+  jwtFromRequest : function(client) {
+                var token = null;
+                if (client && client.handshake.query.token) {
+                    token = client.handshake.query.token;
+                }
+                return token;
+            },
+```
+i have provided a vue.js client to test sending messages in './src/static/main.js' you must provide valid token to be able to broadcast messages over server
+```javascript
+  this.socket = io('http://localhost:3000/',{
+                query: {
+                  'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXJ0ZXN0IiwiaWF0IjoxNjA2MTU1ODEyfQ.yEi3cRIH0x8crCGHAReGOTXKzfOcgsr8kM89Vdq-81c'
+                }
+          })
+```
+i have extended the Logger Class in nestjs to provide saving logs to file './log.txt' you can find implementation
+```javascript
+  
+import { Logger } from '@nestjs/common';
+import * as fs from 'fs'
+export class MyLogger extends Logger {
+  log(message: string, trace: string) {
+    console.log(trace)
+    fs.appendFile('logs.txt',`${trace}  ${message}\r\n`,(err)=>{
+    })
+    super.log(message, trace);
+  }
+  verbose(message: string, trace: string) {
+    console.log(trace)
+    fs.appendFile('logs.txt',`${trace}  ${message}\r\n`,(err)=>{
+    })
+  super.verbose(message, trace);
+}
+}
+```
+   
 ## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+- Author - [Mohamad Khaled](https://www.linkedin.com/in/engmokhaled/)

@@ -11,7 +11,6 @@ import {
   import { MessagesService } from './message.service';
   import {CreateMessageDTO} from './message.dto'
   import { AuthGuard } from '@nestjs/passport';
-  @UseGuards(AuthGuard('jwt'))
   @Controller('messages')
   export class MessagesController {
     constructor(private readonly messageService: MessagesService) {}

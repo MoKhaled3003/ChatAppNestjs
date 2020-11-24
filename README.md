@@ -68,7 +68,7 @@ please note that in development mode you must change mongoose connection string 
                 return token;
             },
 ```
-i have provided a vue.js client to test sending messages in './src/static/main.js' you must provide valid token to be able to broadcast messages over server
+i have provided a vue.js client to test sending messages in './src/static/main.js' you must provide valid token to be able to broadcast messages over server visit 'http://localhost:3000/' in your browser to test. then try to provide invalid token and check validation, the token provided is signed with 'usertest' as payload so please use register endpoint first.
 ```javascript
   this.socket = io('http://localhost:3000/',{
                 query: {

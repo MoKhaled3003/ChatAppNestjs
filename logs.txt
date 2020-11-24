@@ -6,3 +6,58 @@ AppGatewayLogger  app gateway initialized
 AppGatewayLogger  client connected : caFc4-IZBeN4xf4sAAAA at Mon, 23 Nov 2020 22:45:42 GMT
 AppGatewayLogger  app gateway initialized
 AppGatewayLogger  client connected : m0r4XmbC_1fmOnwiAAAA at Tue, 24 Nov 2020 00:24:12 GMT
+AppGatewayLogger  app gateway initialized
+AppGatewayLogger  app gateway initialized
+AppGatewayLogger  client connected : QzwUYEZXEw-9n7ApAAAA at Tue, 24 Nov 2020 18:09:19 GMT
+AppGatewayLogger  client connected : QzwUYEZXEw-9n7ApAAAA at Tue, 24 Nov 2020 18:09:19 GMT
+MessageGatewayLogger  usertest has sent message to all {"name":"dqwdqwd","text":"adada"} at Tue, 24 Nov 2020 18:09:27 GMT
+AppGatewayLogger  app gateway initialized
+AppGatewayLogger  client connected : 4qb63WOSbwYeeEx9AAAA at Tue, 24 Nov 2020 18:22:24 GMT
+MessageGatewayLogger  usertest has sent message to all {"name":"dqwdqwd","text":"edw"} at Tue, 24 Nov 2020 18:22:28 GMT
+AppGatewayLogger  app gateway initialized
+AppGatewayLogger  client connected : YjZnOES0lwNpfq72AAAA at Tue, 24 Nov 2020 19:15:16 GMT
+MessageGatewayLogger  usertest has sent message to all {"name":"dqwdqwd","text":"wee"} at Tue, 24 Nov 2020 19:15:21 GMT
+AppGatewayLogger  app gateway initialized
+AppGatewayLogger  client connected : BcV9LKyn5h6klgptAAAA at Tue, 24 Nov 2020 19:15:52 GMT
+AppGatewayLogger  client disconnected : BcV9LKyn5h6klgptAAAA at Tue, 24 Nov 2020 19:16:10 GMT
+AppGatewayLogger  client connected : 4hOZho4yUlPtmhU2AAAB at Tue, 24 Nov 2020 19:16:11 GMT
+AppGatewayLogger  app gateway initialized
+AppGatewayLogger  client connected : ZgimxAU-lYA31-f3AAAA at Tue, 24 Nov 2020 19:19:42 GMT
+MessageGatewayLogger  usertest has sent message to all {"name":"ewnjr","text":"wqdqw"} at Tue, 24 Nov 2020 19:19:50 GMT
+AppGatewayLogger  app gateway initialized
+AppGatewayLogger  client connected : GGKPT92t_IboamYCAAAA at Tue, 24 Nov 2020 19:21:42 GMT
+MessageGatewayLogger  usertest has sent message to all {"name":"ewnjr","text":"wadnjkaw"} at Tue, 24 Nov 2020 19:21:48 GMT
+AppGatewayLogger  client connected : UOW5Gqm0EKlcW076AAAB at Tue, 24 Nov 2020 19:21:58 GMT
+MessageGatewayLogger  usertest has sent message to all {"name":"ewnjr","text":"dqwdqwd"} at Tue, 24 Nov 2020 19:22:04 GMT
+MessageGatewayLogger  usertest has sent message to all {"name":"dqwdqwd","text":"dwqd"} at Tue, 24 Nov 2020 19:22:29 GMT
+AppGatewayLogger  app gateway initialized
+AppGatewayLogger  client connected : j5C8M5PuMi4oqg-sAAAA at Tue, 24 Nov 2020 19:23:48 GMT
+AppGatewayLogger  client connected : svg9fvDHngl5_k90AAAB at Tue, 24 Nov 2020 19:23:51 GMT
+MessageGatewayLogger  usertest with socket id : svg9fvDHngl5_k90AAAB has sent message to all {"name":"ewnjr","text":"kmskack"} at Tue, 24 Nov 2020 19:23:51 GMT
+MessageGatewayLogger  usertest with socket id : j5C8M5PuMi4oqg-sAAAA has sent message to all {"name":"dqwdqwd","text":"kdwkd"} at Tue, 24 Nov 2020 19:23:59 GMT
+AppGatewayLogger  app gateway initialized
+AppGatewayLogger  client connected : ZBY2aiAQHsFcHeoMAAAA at Tue, 24 Nov 2020 19:33:39 GMT
+AppGatewayLogger  client connected : bEHeYvZfGCjnB7eDAAAB at Tue, 24 Nov 2020 19:33:43 GMT
+MessageGatewayLogger  usertest with socket id : bEHeYvZfGCjnB7eDAAAB has sent message to all {"name":"ewnjr","text":"qwdqwd"} at Tue, 24 Nov 2020 19:33:46 GMT
+MessageGatewayLogger  usertest with socket id : ZBY2aiAQHsFcHeoMAAAA has sent message to all {"name":"dqwdqwd","text":"wqdwqdwq"} at Tue, 24 Nov 2020 19:33:52 GMT
+AppGatewayLogger  app gateway initialized
+AppGatewayLogger  client connected : oRukx4H2S9hddfffAAAA at Tue, 24 Nov 2020 22:30:00 GMT
+AppGatewayLogger  client connected : Uh99KctouRn42aQ9AAAB at Tue, 24 Nov 2020 22:30:02 GMT
+AppGatewayLogger  app gateway initialized
+AppGatewayLogger  client connected : BplMKgj1MqyNiSpFAAAA at Tue, 24 Nov 2020 22:39:59 GMT
+AppGatewayLogger  client connected : 67yXq08Gb8p0tF1hAAAB at Tue, 24 Nov 2020 22:40:00 GMT
+AppGatewayLogger  app gateway initialized
+AppGatewayLogger  client connected : E0Kvwj94GAhTQRa0AAAA at Tue, 24 Nov 2020 22:41:00 GMT
+AppGatewayLogger  client connected : 4wcWkGPQ70KCL1lQAAAB at Tue, 24 Nov 2020 22:41:05 GMT
+AppGatewayLogger  app gateway initialized
+AppGatewayLogger  client connected : _MfF59S_OIYK_vrnAAAA at Tue, 24 Nov 2020 22:42:18 GMT
+AppGatewayLogger  client connected : 0St6bHyX26vQ7lFoAAAB at Tue, 24 Nov 2020 22:42:21 GMT
+AppGatewayLogger  app gateway initialized
+AppGatewayLogger  client connected : 0Zk6RcbtW0uq62bCAAAA at Tue, 24 Nov 2020 23:01:56 GMT
+AppGatewayLogger  client connected : kqwF6GXoy4edfdm_AAAB at Tue, 24 Nov 2020 23:01:57 GMT
+AppGatewayLogger  app gateway initialized
+AppGatewayLogger  client connected : TlW96QHc0mfpwHIJAAAA at Tue, 24 Nov 2020 23:13:15 GMT
+AppGatewayLogger  client connected : zmlVFsMNGoQMo-TaAAAB at Tue, 24 Nov 2020 23:13:18 GMT
+AppGatewayLogger  app gateway initialized
+AppGatewayLogger  client connected : gGG8X_dCap3-sxZeAAAA at Tue, 24 Nov 2020 23:27:52 GMT
+AppGatewayLogger  client connected : TeNnlrz1mMfRujq1AAAB at Tue, 24 Nov 2020 23:27:54 GMT

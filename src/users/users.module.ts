@@ -8,18 +8,20 @@ import {JwtModule} from '@nestjs/jwt';
 import {PassportModule} from '@nestjs/passport'
 import { JwtStrategy } from './jwt.strategy';
 import { LoggerModule } from 'src/logger/looger.module';
+import { FacebookStrategy } from './facebook.strategy';
 
 @Module({
   imports: [LoggerModule,MongooseModule.forFeature([{ name: 'User', schema: UserSchema }]),
-  PassportModule.register({defaultStrategy : 'jwt'}),
+  PassportModule.register({defaultStrategy : 'facebook'}),
   JwtModule.register({
     secret : 'hakonamatata'
   })],
   controllers: [UsersController],
-  providers: [JwtStrategy,UsersService],
+  providers: [FacebookStrategy,JwtStrategy,UsersService],
   exports:[
     JwtStrategy,
-    PassportModule
+    PassportModule,
+    FacebookStrategy
   ]
 })
 export class UsersModule {}

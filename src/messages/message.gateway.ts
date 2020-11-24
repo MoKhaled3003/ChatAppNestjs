@@ -1,4 +1,4 @@
-import { SubscribeMessage, WebSocketGateway, OnGatewayConnection, OnGatewayDisconnect, OnGatewayInit, WebSocketServer, WsResponse } from '@nestjs/websockets';
+import { SubscribeMessage, WebSocketGateway, OnGatewayConnection, OnGatewayDisconnect, OnGatewayInit, WebSocketServer, WsResponse, ConnectedSocket } from '@nestjs/websockets';
 import { Socket, Server } from 'socket.io';
 import { 
   Body,
@@ -14,15 +14,14 @@ import { MyLogger } from 'src/logger/logger.service';
 @WebSocketGateway()
 
 export class MessageGateway {
-  @WebSocketServer() wss: Server;
   private logger : MyLogger = new MyLogger('MessageGatewayLogger')
-  
+
   constructor(private  messageService: MessagesService) {}
 
   @SubscribeMessage('messageToServer')
-  handleMessage(client: Socket, @Body() createMessageDTO: CreateMessageDTO,@Req() req): void {
-   this.logger.verbose(`${req.user.username} has sent message to all ${JSON.stringify(createMessageDTO)} at ${new Date().toUTCString()}`,"MessageGatewayLogger")
-   this.wss.emit('messageToClient',createMessageDTO)
+  handleMessage(@ConnectedSocket() client: Socket, @Body() createMessageDTO: CreateMessageDTO,@Req() req): void {
+   this.logger.verbose(`${req.user.username} with socket id : ${client.id} has sent message to all ${JSON.stringify(createMessageDTO)} at ${new Date().toUTCString()}`,"MessageGatewayLogger")
+   client.broadcast.emit('messageToClient',createMessageDTO)
    this.messageService.createMessage(createMessageDTO,req.user);
   }
 }

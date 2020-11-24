@@ -8,8 +8,8 @@ import { LoggerModule } from './logger/looger.module';
 //please note connection string for development is 'mongodb://localhost:27017/Chat'
 
 @Module({
-  imports: [LoggerModule,MessageModule,UsersModule,MongooseModule.forRoot('mongodb://mongodb:27017/Chat')],
+  imports: [LoggerModule,MessageModule,UsersModule,MongooseModule.forRoot('mongodb://localhost:27017/Chat')],
   controllers: [],
-  providers: [AppGateway],
+  providers: [AppGateway]
 })
 export class AppModule {}

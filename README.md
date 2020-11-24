@@ -96,7 +96,33 @@ export class MyLogger extends Logger {
 }
 }
 ```
-   
+  i have implemented validation pipe for user registration
+```javascript
+  
+import { ApiProperty } from '@nestjs/swagger';
+import { IsString,MinLength,MaxLength, IsNotEmpty } from 'class-validator'
+export class CreateUserDTO {
+
+@ApiProperty()
+@IsString()
+@MinLength(4)
+@MaxLength(10)
+@IsNotEmpty()
+readonly username: string;
+
+@IsString()
+@MinLength(4)
+@MaxLength(10)
+@IsNotEmpty()
+@ApiProperty()
+password: string;
+}
+```
+  as per our technical interview you asked me what will happen if database container crashed , i used volume to persist data 
+```javascript
+ volumes:
+      - mongodata:/data/db
+```
 ## Stay in touch
 
 - Author - [Mohamad Khaled](https://www.linkedin.com/in/engmokhaled/)

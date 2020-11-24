@@ -4,3 +4,5 @@ UsersControllerLogger  User has been logged in {"username":"usertest","password"
 MessageGatewayLogger  usertest has sent message to all {"name":"dqwdqwd","text":"wqdqwdqwdqd"} at Mon, 23 Nov 2020 22:43:25 GMT
 AppGatewayLogger  app gateway initialized
 AppGatewayLogger  client connected : caFc4-IZBeN4xf4sAAAA at Mon, 23 Nov 2020 22:45:42 GMT
+AppGatewayLogger  app gateway initialized
+AppGatewayLogger  client connected : m0r4XmbC_1fmOnwiAAAA at Tue, 24 Nov 2020 00:24:12 GMT

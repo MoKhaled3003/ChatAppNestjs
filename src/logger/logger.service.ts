@@ -1,6 +1,7 @@
 
 import { Logger } from '@nestjs/common';
 import * as fs from 'fs'
+//extending logger class to add fs module append file function to persist logss
 export class MyLogger extends Logger {
   log(message: string, trace: string) {
     console.log(trace)

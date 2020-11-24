@@ -5,7 +5,6 @@ import { Injectable, Req, UnauthorizedException } from '@nestjs/common';
 import { PassportStrategy } from '@nestjs/passport';
 import { Strategy,ExtractJwt } from 'passport-jwt';
 import {jwtpayload} from './jwtpayload.interface'
-import { Socket } from 'dgram';
 
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy){
@@ -13,6 +12,7 @@ export class JwtStrategy extends PassportStrategy(Strategy){
         @InjectModel('User') private readonly UserModel : Model<User> 
     ){
         super({
+            //custom jwt extractor to extract JWT token from query param in sockeio connection by vuejs app
             jwtFromRequest : function(client) {
                 var token = null;
                 if (client && client.handshake.query.token) {

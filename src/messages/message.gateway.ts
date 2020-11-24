@@ -16,7 +16,9 @@ import { MyLogger } from 'src/logger/logger.service';
 export class MessageGateway {
   @WebSocketServer() wss: Server;
   private logger : MyLogger = new MyLogger('MessageGatewayLogger')
+  
   constructor(private  messageService: MessagesService) {}
+
   @SubscribeMessage('messageToServer')
   handleMessage(client: Socket, @Body() createMessageDTO: CreateMessageDTO,@Req() req): void {
    this.logger.verbose(`${req.user.username} has sent message to all ${JSON.stringify(createMessageDTO)} at ${new Date().toUTCString()}`,"MessageGatewayLogger")

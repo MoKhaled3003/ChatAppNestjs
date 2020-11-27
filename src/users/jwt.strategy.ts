@@ -17,13 +17,16 @@ export class JwtStrategy extends PassportStrategy(Strategy){
                 var token = null;
                 if (client && client.handshake.query.token) {
                     token = client.handshake.query.token;
+                    console.log(token)
                 }
+                console.log('>>>>>>after',token)
                 return token;
             },
             secretOrKey : 'hakonamatata'
         })
     }
     async validate(payload: jwtpayload){
+      console.log('herer is payload',payload)
         const {username} = payload;
         const user = await this.UserModel.findOne({ username })
 

@@ -10,7 +10,6 @@ import { MessagesService } from './message.service';
 import { CreateMessageDTO } from './message.dto';
 import { MyLogger } from 'src/logger/logger.service';
 import * as socketioJwt from 'socketio-jwt';
-
 @UseGuards(AuthGuard('jwt'))
 @WebSocketGateway()
 
@@ -39,6 +38,7 @@ export class MessageGateway implements OnModuleInit,OnGatewayConnection,OnGatewa
     this.logger.log(`client connected : ${client.id} at ${new Date().toUTCString()}`,'MessageGatewayLogger')
   }
 
+  @UseGuards(AuthGuard('jwt'))
   @SubscribeMessage('messageToServer')
   handleMessage(@ConnectedSocket() client: Socket, @Body() createMessageDTO: CreateMessageDTO,@Req() req): void {
    this.logger.verbose(`${req.user.username} with socket id : ${client.id} has sent message to all ${JSON.stringify(createMessageDTO)} at ${new Date().toUTCString()}`,"MessageGatewayLogger")

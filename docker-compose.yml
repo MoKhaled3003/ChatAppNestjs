@@ -11,22 +11,22 @@ services:
     # always restart the container if it stops.
     restart: always
     # docker run -t is allow
-    tty: true
+    tty: true 
     # application port, this is take value from env file
     ports:
       - "3000:3000"
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+
     # working directory
     working_dir: /var/www/nest-chat-realtime
-    # save (persist) data and also to share data between containers
-    volumes:
-      - ./:/var/www/nest-chat-realtime
-      - /var/www/nest-chat-realtime/node_modules
+    # save (persist) data and also to share data between contain
     depends_on:
       - mongodb
     links:
       - mongodb
-    environment:
-      WAIT_HOSTS: db_mongo:27017
   mongodb:
     image: 'mongo'
     container_name: db_mongo

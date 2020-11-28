@@ -3,11 +3,7 @@ import {
   Post,
   Body,
   UsePipes,
-  ValidationPipe,
-  UseGuards,
-  Get,
-  Req,
-  HttpStatus
+  ValidationPipe
 } from '@nestjs/common';
 import {
   UsersService
@@ -18,7 +14,6 @@ import {
 import {
   MyLogger
 } from 'src/logger/logger.service';
-import { AuthGuard } from '@nestjs/passport';
 
 @Controller('users')
 export class UsersController {
@@ -39,20 +34,5 @@ export class UsersController {
   } > {
     this.logger.log(`User has been logged in ${JSON.stringify(createUserDTO)} at ${new Date().toUTCString()}`, "UsersControllerLogger")
     return this.usersService.findUser(createUserDTO);
-  }
-
-  @Get("/facebook")
-  @UseGuards(AuthGuard("facebook"))
-  async facebookLogin(): Promise<any> {
-    return HttpStatus.OK;
-  }
-
-  @Get("/facebook/redirect")
-  @UseGuards(AuthGuard("facebook"))
-  async facebookLoginRedirect(@Req() req): Promise<any> {
-    return {
-      statusCode: HttpStatus.OK,
-      data: req.user,
-    };
   }
 }

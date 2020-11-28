@@ -26,6 +26,20 @@
 
 [Nest](https://github.com/nestjs/nest) framework Chat App as a proof of concept kindly find postman collection save in root directory to test APIs .
 
+### Prerequisites  
+  
+-  Node v12 LTS
+-  MongoDB
+-  Postman
+  ### Languages, libraries and tools used
+
+-   [NestJs](https://docs.nestjs.com/)
+-   [Socket.io](https://socket.io/)
+-   [Mongoose ODM](https://mongoosejs.com/)
+-   [Docker](https://www.docker.com/)
+-   [Swagger API](https://swagger.io/)
+-   [Socketio client tool](https://amritb.github.io/socketio-client-tool/)
+
 
 ## Running the app
 
@@ -44,20 +58,15 @@ $ npm start
 
 # unit tests
 $ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
 ```
+- visit [Socketio client tool](https://amritb.github.io/socketio-client-tool/) to test the Chat Gateway Events
+- ![explain screenshot](/docs/images/Socket-io-client-tool.png?raw=true) 
+- ![explain screenshot](/docs/images/Socket-io-client-tool(1).png?raw=true) 
 
 ## Support
+- 
+- please note that in development mode you must change mongoose connection string in '.env' file 
 
-please note that in development mode you must change mongoose connection string in './src/app.module.ts' which is used for docker image to connect mongodb service in docker compose from 'mongodb://mongodb:27017/Chat' to 
-```javascript
-  imports: [MongooseModule.forRoot('mongodb://localhost:27017/Chat')], //used for development mode
-```
  i have used passport-jwt as my third party authentication service , so in './src/users/jwt.strategy.ts' you will find i have made custom jwt token extractor to extract token from query param in websocket connection to allow only authenticated users to connect to messages service websocket server.
 ```javascript
   jwtFromRequest : function(client) {
@@ -67,14 +76,6 @@ please note that in development mode you must change mongoose connection string 
                 }
                 return token;
             },
-```
-i have provided a vue.js client to test sending messages in './src/static/main.js' you must provide valid token to be able to broadcast messages over server visit 'http://localhost:3000/' in your browser to test. then try to provide invalid token and check validation, the token provided is signed with 'usertest' as payload so please use register endpoint first.
-```javascript
-  this.socket = io('http://localhost:3000/',{
-                query: {
-                  'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXJ0ZXN0IiwiaWF0IjoxNjA2MTU1ODEyfQ.yEi3cRIH0x8crCGHAReGOTXKzfOcgsr8kM89Vdq-81c'
-                }
-          })
 ```
 i have extended the Logger Class in nestjs to provide saving logs to file './log.txt' you can find implementation
 ```javascript

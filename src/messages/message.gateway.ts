@@ -4,7 +4,9 @@ import {
   Body,
   OnModuleInit,
   Req,
-  UseGuards
+  UseGuards,
+  UsePipes,
+  ValidationPipe
 } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { MessagesService } from './message.service';
@@ -39,6 +41,7 @@ export class MessageGateway implements OnModuleInit,OnGatewayConnection,OnGatewa
   }
 
   @UseGuards(AuthGuard('jwt'))
+  @UsePipes(ValidationPipe)
   @SubscribeMessage('messageToServer')
   handleMessage(@ConnectedSocket() client: Socket, @Body() createMessageDTO: CreateMessageDTO,@Req() req): void {
    this.logger.verbose(`${req.user.username} with socket id : ${client.id} has sent message to all ${JSON.stringify(createMessageDTO)} at ${new Date().toUTCString()}`,"MessageGatewayLogger")

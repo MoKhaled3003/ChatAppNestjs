@@ -261,3 +261,28 @@ MessageGatewayLogger  client connected : AYvBdQ1DVdKC1zWGAAAB at Sat, 28 Nov 202
 MessageGatewayLogger  client connected : U5IAId5DapRJMW-_AAAC at Sat, 28 Nov 2020 20:57:52 GMT
 MessageGatewayLogger  client disconnected : U5IAId5DapRJMW-_AAAC at Sat, 28 Nov 2020 20:58:02 GMT
 MessageGatewayLogger  client connected : T_3C0QFTYMm6nNDfAAAE at Sat, 28 Nov 2020 20:59:06 GMT
+MessageGatewayLogger  app gateway initialized
+MessageGatewayLogger  client connected : ObXTK7NYBXtTa41vAAAA at Sat, 28 Nov 2020 21:55:20 GMT
+MessageGatewayLogger  client connected : -J89h0zV-di7UZvGAAAB at Sat, 28 Nov 2020 21:55:21 GMT
+MessageGatewayLogger  client connected : _nuS_ncW61oxgkyyAAAC at Sat, 28 Nov 2020 21:55:22 GMT
+UsersControllerLogger  trying to log in {"username":"usertest","password":"12345678"} at Sat, 28 Nov 2020 21:56:27 GMT
+MessageGatewayLogger  client disconnected : ObXTK7NYBXtTa41vAAAA at Sat, 28 Nov 2020 21:57:04 GMT
+MessageGatewayLogger  client connected : 4_pispO97TQ-djufAAAD at Sat, 28 Nov 2020 21:57:04 GMT
+MessageGatewayLogger  client disconnected : 4_pispO97TQ-djufAAAD at Sat, 28 Nov 2020 21:57:08 GMT
+MessageGatewayLogger  client connected : DYYhfsZz_vtznTNqAAAE at Sat, 28 Nov 2020 21:57:25 GMT
+MessageGatewayLogger  usertest with socket id : DYYhfsZz_vtznTNqAAAE has sent message to all {} at Sat, 28 Nov 2020 21:57:35 GMT
+MessageGatewayLogger  usertest with socket id : DYYhfsZz_vtznTNqAAAE has sent message to all {"djk":"sdfdsf"} at Sat, 28 Nov 2020 21:59:34 GMT
+MessageGatewayLogger  app gateway initialized
+MessageGatewayLogger  client connected : luBRvd21AivR-7AlAAAA at Sat, 28 Nov 2020 22:01:16 GMT
+MessageGatewayLogger  client connected : -xd4w2rTk1FxDorzAAAB at Sat, 28 Nov 2020 22:01:17 GMT
+MessageGatewayLogger  client connected : gldb4srMdHohDICiAAAC at Sat, 28 Nov 2020 22:01:17 GMT
+MessageGatewayLogger  client disconnected : luBRvd21AivR-7AlAAAA at Sat, 28 Nov 2020 22:01:36 GMT
+MessageGatewayLogger  client connected : 6912gal01i0Ruu2IAAAD at Sat, 28 Nov 2020 22:01:36 GMT
+MessageGatewayLogger  client disconnected : 6912gal01i0Ruu2IAAAD at Sat, 28 Nov 2020 22:01:41 GMT
+MessageGatewayLogger  client connected : XkHiCpJapmhIhAq-AAAE at Sat, 28 Nov 2020 22:01:41 GMT
+MessageGatewayLogger  usertest with socket id : XkHiCpJapmhIhAq-AAAE has sent message to all {"text":"awdad"} at Sat, 28 Nov 2020 22:02:25 GMT
+MessageGatewayLogger  client disconnected : XkHiCpJapmhIhAq-AAAE at Sat, 28 Nov 2020 22:02:36 GMT
+MessageGatewayLogger  app gateway initialized
+MessageGatewayLogger  client connected : _EWnuNU_koOQKmO0AAAA at Sat, 28 Nov 2020 22:10:00 GMT
+MessageGatewayLogger  client connected : Cs0nCZsm_tLLHzUBAAAB at Sat, 28 Nov 2020 22:10:00 GMT
+MessageGatewayLogger  client connected : tJQ0MNKJWmGs0qNzAAAC at Sat, 28 Nov 2020 22:10:08 GMT

@@ -7,7 +7,7 @@ import { UserSchema } from './users.model';
 import {JwtModule} from '@nestjs/jwt';
 import {PassportModule} from '@nestjs/passport'
 import { JwtStrategy } from './jwt.strategy';
-import { LoggerModule } from 'src/logger/looger.module';
+import { LoggerModule } from '../logger/looger.module';
 
 @Module({
   imports: [LoggerModule,MongooseModule.forFeature([{ name: 'User', schema: UserSchema }]),

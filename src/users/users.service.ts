@@ -6,10 +6,12 @@ import { CreateUserDTO } from './users.dto';
 import * as bcrypt from 'bcrypt'
 import {JwtService} from '@nestjs/jwt'
 import {jwtpayload} from './jwtpayload.interface'
+import { MyLogger } from '../logger/logger.service';
 
 @Injectable()
 export class UsersService {
-constructor(@InjectModel('User') private readonly UserModel : Model<User>,private jwtService: JwtService) {}
+constructor(@InjectModel('User') private readonly UserModel : Model<User>,private jwtService: JwtService,
+private logger: MyLogger = new MyLogger('UsersControllerLogger')) {}
 
 async create(createUserDTO: CreateUserDTO): Promise<any> {
     let {password} = createUserDTO;
@@ -19,11 +21,15 @@ async create(createUserDTO: CreateUserDTO): Promise<any> {
     const createdUser = new this.UserModel(createUserDTO);
 
 try{
-    return await createdUser.save();
+    let user : User = await createdUser.save();
+    this.logger.log(`new user has been created ${user} at ${new Date().toUTCString()}`, "UsersServicesLogger")
+    return user;
 }catch(error){
     if(error.code == '11000'){
+        this.logger.log(`User ${JSON.stringify(createUserDTO)} is already exists ${new Date().toUTCString()}`, "UsersServicesLogger")
         throw new ConflictException('username is already exists');
     }else {
+        this.logger.error(`${error.message} with code : ${error.code} at saving user ${new Date().toUTCString()}`, "UsersServicesLogger")
         throw new InternalServerErrorException();
     }
 }
@@ -37,6 +43,7 @@ async findUser(createUserDTO): Promise<{accessToken : string}> {
         let accessToken  =  this.jwtService.sign(payload);
         return {accessToken};
     }else{
+        this.logger.log(`User ${JSON.stringify(createUserDTO)} has invalid credentials ${new Date().toUTCString()}`, "UsersServicesLogger")
         throw new UnauthorizedException('username or password are invalid')
     }
 }

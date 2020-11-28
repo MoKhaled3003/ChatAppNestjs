@@ -4,7 +4,8 @@ import {
   Body,
   OnModuleInit,
   Req,
-  UseGuards} from '@nestjs/common';
+  UseGuards
+} from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { MessagesService } from './message.service';
 import { CreateMessageDTO } from './message.dto';
@@ -34,7 +35,6 @@ export class MessageGateway implements OnModuleInit,OnGatewayConnection,OnGatewa
   }
   
   handleConnection(client: Socket, ...args: any[]) {
-    console.log(client.handshake)
     this.logger.log(`client connected : ${client.id} at ${new Date().toUTCString()}`,'MessageGatewayLogger')
   }
 

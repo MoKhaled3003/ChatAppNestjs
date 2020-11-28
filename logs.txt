@@ -208,3 +208,56 @@ MessageGatewayLogger  app gateway initialized
 MessageGatewayLogger  client connected : e4phhUMHwsU6M9iaAAAA at Sat, 28 Nov 2020 01:51:29 GMT
 MessageGatewayLogger  app gateway initialized
 MessageGatewayLogger  client connected : lWemhg1qG_eu1Oi0AAAA at Sat, 28 Nov 2020 01:56:22 GMT
+MessageGatewayLogger  app gateway initialized
+MessageGatewayLogger  client connected : ryWhdMmGbyjTXZrUAAAA at Sat, 28 Nov 2020 13:50:18 GMT
+UsersControllerLogger  User has been created {"username":"usertest","password":"12345678"} at Sat, 28 Nov 2020 13:50:19 GMT
+MessageGatewayLogger  client connected : idMYRx3f3R_xS6BUAAAB at Sat, 28 Nov 2020 13:50:20 GMT
+UsersControllerLogger  User has been created {"username":"usertst","password":"12345678"} at Sat, 28 Nov 2020 13:50:49 GMT
+UsersControllerLogger  User has been created {"username":"usertst","password":"12345678"} at Sat, 28 Nov 2020 13:51:29 GMT
+MessageGatewayLogger  app gateway initialized
+MessageGatewayLogger  client connected : 9BRkcgnRrHlYGfYeAAAA at Sat, 28 Nov 2020 15:26:51 GMT
+UsersControllerLogger  trying to create {"username":"usertst","password":"12345678"} at Sat, 28 Nov 2020 15:26:55 GMT
+UsersServicesLogger  User {"username":"usertst","password":"$2b$10$f255Il6EZh5LFbXflsJBH.EIu5Y/IKGEMmgQl6CAAAaCudpYlBm8C"} is already exists Sat, 28 Nov 2020 15:26:55 GMT
+MessageGatewayLogger  client connected : hcuZtpuY09ehMZJzAAAB at Sat, 28 Nov 2020 15:26:57 GMT
+UsersControllerLogger  trying to create {"username":"usertst","password":"12345678"} at Sat, 28 Nov 2020 15:27:04 GMT
+UsersServicesLogger  User {"username":"usertst","password":"$2b$10$Dpa1xjDNarzka2VgjVVdveV56fJ3VvpBbfXOiYMIBPLikdF2kG25m"} is already exists Sat, 28 Nov 2020 15:27:04 GMT
+MessageGatewayLogger  app gateway initialized
+MessageGatewayLogger  client connected : gqRYKGTuTdOZoE4gAAAA at Sat, 28 Nov 2020 15:28:50 GMT
+MessageGatewayLogger  client connected : QSHEo3OoEGZEfid-AAAB at Sat, 28 Nov 2020 15:28:51 GMT
+UsersControllerLogger  trying to create {"username":"usertst","password":"12345678"} at Sat, 28 Nov 2020 15:29:07 GMT
+UsersServicesLogger  User {"username":"usertst","password":"$2b$10$GMcCsLATxRxw.MHHgoMlI.c7wRjD6/6i1zZMC1mAPKFhr4K/Uxkna"} is already exists Sat, 28 Nov 2020 15:29:07 GMT
+MessageGatewayLogger  app gateway initialized
+MessageGatewayLogger  client connected : sg0eJ99dI_5KPulzAAAA at Sat, 28 Nov 2020 20:00:27 GMT
+MessageGatewayLogger  client connected : xIf5vDHeY9A5nyvDAAAB at Sat, 28 Nov 2020 20:00:28 GMT
+UsersControllerLogger  trying to create {"username":"mokhaled","password":"12345678"} at Sat, 28 Nov 2020 20:01:31 GMT
+UsersServicesLogger  new user has been created {
+  _id: 5fc2ac9b74bd9538addc19fb,
+  username: 'mokhaled',
+  password: '$2b$10$i65g5m0Lp2wxa/MgZOgpauOp50XIKBIPHz8g0jmmBmOd4NODjGNVK',
+  __v: 0
+} at Sat, 28 Nov 2020 20:01:31 GMT
+UsersControllerLogger  trying to log in {"username":"mokhaled","password":"12345678"} at Sat, 28 Nov 2020 20:02:42 GMT
+MessageGatewayLogger  app gateway initialized
+MessageGatewayLogger  app gateway initialized
+MessageGatewayLogger  client connected : l4Y1-iNvR4gAtAplAAAA at Sat, 28 Nov 2020 20:15:58 GMT
+MessageGatewayLogger  client connected : 2hQWoI__Z9ZTzNSkAAAB at Sat, 28 Nov 2020 20:16:00 GMT
+MessageGatewayLogger  app gateway initialized
+MessageGatewayLogger  client connected : W7XKkCZN8_NUlrqFAAAA at Sat, 28 Nov 2020 20:17:43 GMT
+MessageGatewayLogger  client connected : gsb_RXvNIsOVVKDqAAAB at Sat, 28 Nov 2020 20:17:44 GMT
+MessageGatewayLogger  app gateway initialized
+MessageGatewayLogger  client connected : Q3rXnA77O0f_ThljAAAA at Sat, 28 Nov 2020 20:51:43 GMT
+MessageGatewayLogger  client connected : 0o1i4GJ1jZtuk06cAAAB at Sat, 28 Nov 2020 20:51:47 GMT
+MessageGatewayLogger  app gateway initialized
+MessageGatewayLogger  client connected : zwAXiOz_C6CcAVFEAAAA at Sat, 28 Nov 2020 20:54:31 GMT
+MessageGatewayLogger  client connected : L0PFMsR9yYtpy8o8AAAB at Sat, 28 Nov 2020 20:54:34 GMT
+MessageGatewayLogger  app gateway initialized
+MessageGatewayLogger  client connected : g326U-LAfyyU_li7AAAA at Sat, 28 Nov 2020 20:55:38 GMT
+MessageGatewayLogger  client connected : vlci1GDDZpBFg3VHAAAB at Sat, 28 Nov 2020 20:55:41 GMT
+UsersControllerLogger  trying to log in {"username":"ojpjojopj","password":"123456"} at Sat, 28 Nov 2020 20:55:58 GMT
+UsersServicesLogger  User {"username":"ojpjojopj","password":"123456"} has invalid credentials Sat, 28 Nov 2020 20:55:58 GMT
+MessageGatewayLogger  app gateway initialized
+MessageGatewayLogger  client connected : CsG2n3KxNIKVpEMxAAAA at Sat, 28 Nov 2020 20:57:20 GMT
+MessageGatewayLogger  client connected : AYvBdQ1DVdKC1zWGAAAB at Sat, 28 Nov 2020 20:57:22 GMT
+MessageGatewayLogger  client connected : U5IAId5DapRJMW-_AAAC at Sat, 28 Nov 2020 20:57:52 GMT
+MessageGatewayLogger  client disconnected : U5IAId5DapRJMW-_AAAC at Sat, 28 Nov 2020 20:58:02 GMT
+MessageGatewayLogger  client connected : T_3C0QFTYMm6nNDfAAAE at Sat, 28 Nov 2020 20:59:06 GMT

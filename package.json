@@ -47,6 +47,7 @@
     "rimraf": "^3.0.2",
     "rxjs": "^6.6.3",
     "socketio-jwt": "^4.6.2",
+    "swagger-ui-express": "^4.1.5",
     "winston": "^3.3.3",
     "winston-mongodb": "^5.0.5"
   },

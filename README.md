@@ -60,12 +60,36 @@ $ npm start
 $ npm run test
 ```
 - visit [Socketio client tool](https://amritb.github.io/socketio-client-tool/) to test the Chat Gateway Events
-- ![explain screenshot](/docs/images/Socket-io-client-tool.png?raw=true) 
-- ![explain screenshot](/docs/images/Socket-io-client-tool(1).png?raw=true) 
+- please provide the access token from the responce Login ENDPOINT in the following object and provide it to   socketio-client-tool in the 'socketio options json' to initiate the connection successfully else you won't be able to connect to the websocket server.
+```javascript
+{
+  "query":
+     {
+        "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXJ0ZXN0IiwiaWF0IjoxNjA2NjAwNTg4fQ.J04x78GKIChkAodMDeNUhmsrM7OI2Lun1k8mkegq-NM"
+     }
+}
+```
+- ![explain screenshot](/docs/images/Socket-io-client-tool.png?raw=true)
 
+- you must provide the message in the form of JSON object or it will be rejected by validation pipes
+
+```javascript
+{
+  "text": "Hello World!"
+}
+```
+
+- ![explain screenshot](/docs/images/Socket-io-client-tool1.png?raw=true) 
+
+- you can listen to the 'clientToServer' Event and Emit to 'messageToServer' Event
 ## Support
-- 
-- please note that in development mode you must change mongoose connection string in '.env' file 
+- please note that in development mode you must change mongoose connection string in '.env' file at MONGODBDEV
+- please note that in running from docker-copmose file you will be in production mode it will switch connection to MONGODBPROD so please if you have any mongod service running in your host on port 27017 it will stop excutting containrization process,because i run the mongo service inside the container in the same port and exposing it to 27017.
+
+```bash
+# stop mongo local server before docker-compose up
+$ service mongod stop
+```
 
  i have used passport-jwt as my third party authentication service , so in './src/users/jwt.strategy.ts' you will find i have made custom jwt token extractor to extract token from query param in websocket connection to allow only authenticated users to connect to messages service websocket server.
 ```javascript

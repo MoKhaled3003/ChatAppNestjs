@@ -24,8 +24,7 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework Chat App as a proof of concept kindly find postman collection save in root directory to test APIs .
-
+[Nest](https://github.com/nestjs/nest) framework Chat App as a proof of concept.
 ### Prerequisites  
   
 -  Node v12 LTS
@@ -59,6 +58,7 @@ $ npm start
 # unit tests
 $ npm run test
 ```
+- visit [Chat App Api Docs](http://localhost:3000/api) to find Users Module Api Docs.
 - visit [Socketio client tool](https://amritb.github.io/socketio-client-tool/) to test the Chat Gateway Events
 - please provide the access token from the responce Login ENDPOINT in the following object and provide it to   socketio-client-tool in the 'socketio options json' to initiate the connection successfully else you won't be able to connect to the websocket server.
 ```javascript

@@ -90,8 +90,14 @@ $ npm run test
 # stop mongo local server before docker-compose up
 $ service mongod stop
 ```
-
- i have used passport-jwt as my third party authentication service , so in './src/users/jwt.strategy.ts' you will find i have made custom jwt token extractor to extract token from query param in websocket connection to allow only authenticated users to connect to messages service websocket server.
+- now the container won't run as root user
+```javascript
+//making sure that container isn't running as root
+ RUN addgroup  nodejs && adduser   -S -s  /bin/bash -g  nodejs nodejs
+ RUN chown nodejs:nodejs  /var/
+ USER nodejs
+```
+ - i have used passport-jwt as my third party authentication service , so in './src/users/jwt.strategy.ts' you will find i have made custom jwt token extractor to extract token from query param in websocket connection to allow only authenticated users to connect to messages service websocket server.
 ```javascript
   jwtFromRequest : function(client) {
                 var token = null;

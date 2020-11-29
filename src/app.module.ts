@@ -7,7 +7,7 @@ import { ConfigModule } from '@nestjs/config';
 
 
 const getMongoUrl = () => {
-  if (process.env.NODE_ENV == 'development' || process.env.NODE_ENV !== 'production') {
+  if (process.env.NODE_ENV !== 'production') {
     return  process.env.MONGODBDEV 
  } else {
     return process.env.MONGODBPROD

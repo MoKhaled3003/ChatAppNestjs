@@ -285,4 +285,5 @@ MessageGatewayLogger  client disconnected : XkHiCpJapmhIhAq-AAAE at Sat, 28 Nov 
 MessageGatewayLogger  app gateway initialized
 MessageGatewayLogger  client connected : _EWnuNU_koOQKmO0AAAA at Sat, 28 Nov 2020 22:10:00 GMT
 MessageGatewayLogger  client connected : Cs0nCZsm_tLLHzUBAAAB at Sat, 28 Nov 2020 22:10:00 GMT
-MessageGatewayLogger  client connected : tJQ0MNKJWmGs0qNzAAAC at Sat, 28 Nov 2020 22:10:08 GMT
+MessageGatewayLogger  client connected : tJQ0MNKJWmGs0qNzAAAC at Sat, 28 Nov 2020 22:10:08 GMTMessageGatewayLogger  app gateway initialized
+MessageGatewayLogger  client connected : 5kuBCiK8SMv50K9sAAAA at Sun, 29 Nov 2020 00:28:17 GMT
